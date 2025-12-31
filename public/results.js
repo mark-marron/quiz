@@ -92,7 +92,7 @@ function showResults() {
 
   results.forEach(r => {
     const d = distance(answer, r);
-    const correct = d <= 0.04;
+    const correct = d <= 0.06;
 
     const li = document.createElement("li");
     li.textContent = `${r.teamName} - ${correct ? " Correct" : " Wrong"}`;
