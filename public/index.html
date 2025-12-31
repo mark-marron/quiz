@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Join Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page">
+        <div id="join">
+            <input id="teamName" placeholder="Team name" />
+            <button onclick="joinGame()">Join</button>
+            <img src="header.jpeg" />
+        </div>
+
+        <div id="waiting" style="display:none;">
+            <span>Waiting for the game to start...</span>
+        </div>
+
+        <div id="game" style="display:none;">
+            <span>Tap the image</span>
+            <div id="imageWrapper">
+                <img id="gameImage"/>
+                <div id="marker"></div>
+            </div>
+            <button onclick="submit()">Submit</button>
+        </div>
+
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="client.js"></script>
+    </div>
+</body>
+</html>
